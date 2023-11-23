@@ -16,7 +16,7 @@ int main(int argc, char *argv[]) {
 	setlocale(LC_ALL, "Portuguese");
 	//       menu/20dia/4jornal/materia
 
-	FILE *arquivo = fopen("arquivo.txt", "wt");
+	FILE *arquivo = fopen("arquivo.txt", "a");
 	
 	if (arquivo == NULL) {
         printf("Erro ao abrir o arquivo.\n");
@@ -43,6 +43,7 @@ int main(int argc, char *argv[]) {
 	strcpy(str2, "Email do usuário: ");
 	fputs(str2, arquivo);
 	fputs(usuario.email, arquivo);
+	fputs("\n\n", arquivo);
 		system("cls");
 		
 		do{
